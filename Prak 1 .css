@@ -1,0 +1,35 @@
+header {
+    text-align: center;
+}
+
+navigation {
+    text-align: center;
+}
+
+h3 {
+    color: red;
+}
+
+body {
+    font-size: larger;
+    color: black;
+    font-family: "roboto", sans-serif;
+    margin: 80px;
+    background-image: url('Background\ Body\ .jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section {
+    font-size: large;
+    font-weight: bold;
+    background-image: url('Background\ Section\ .jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+footer {
+    font-size: larger;
+    text-align: right;
+}

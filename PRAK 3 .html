@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body id="body">
+    <label for="color">Select Theme :</label>
+    <select name="color" id="color" onchange="tema()">
+    <option value="light">Light</option>
+    <option value="dark">Dark</option>
+</select>
+
+<script>
+    function tema(){
+        var tampungwarna=document.getElementById("color");
+
+        if(tampungwarna.value=="light"){
+            document.body.style.backgroundColor = "white";
+            document.getElementById("body").style.color = "black";
+        }else{
+            document.body.style.backgroundColor = "black";
+            document.getElementById("body").style.color = "white";
+        }
+    }
+</script>
+
+    <h1>This My Website</h1>
+
+    <label for="kata">Select the weather type today</label>
+    <select name="kata" id="kata" onchange="musim()">
+        <option value="Spring">Spring</option>
+        <option value="Summer">Summer</option>
+        <option value="Autumn">Autumn</option>
+        <option value="Winter">Winter</option>
+        <option value="Dry">Dry</option>
+        <option value="Rainy">Rainy</option>
+    </select>
+    <p id="ini"></p>
+    <script>
+        function musim(){
+            var jenismusim=document.getElementById("kata");
+
+            if(jenismusim.value=="Spring"){
+                var cuaca=document.getElementById("ini");
+                cuaca.innerText = "Spring adalah Musim Semi";
+            }else if(jenismusim.value=="Summer"){
+                var cuaca=document.getElementById("ini");
+                cuaca.innerText = "Summer adalah musim panas";
+            }else if(jenismusim.value=="Autumn"){
+                var cuaca=document.getElementById("ini");
+                cuaca.innerText = "Autumn adalah musim gugur";
+            }else if(jenismusim.value=="Winter"){
+                var cuaca=document.getElementById("ini");
+                cuaca.innerText = "Winter adalah musim salju";
+            }else if(jenismusim.value=="Dry"){
+                var cuaca=document.getElementById("ini");
+                cuaca.innerText = "Dry adalah musim panas";
+            }else if(jenismusim.value="Rainy"){
+                var cuaca=document.getElementById("ini");
+                cuaca.innerText = "Rainy adalah musim hujan";
+            }
+        }
+    </script>
+
+<h2>Pengecekan Faktorial</h2>
+<h2>Masukan Angka: </h2>
+<input type="number" name="angka" id="num">
+<button type="submit" onclick="faktorial()">Periksa</button>
+
+<script>
+    function faktorial(){
+        var faktor = document.getElementById("num");
+
+          let hasil = 1;
+          if (faktor.value == 0){
+            hasil = 0;
+          }else if(faktor.value == 1){
+              hasil=1;
+          }else{
+            for(var i = faktor.value; i >= 1; i--){
+              hasil = hasil * i;
+            }
+          }
+         
+        var result = document.getElementById("hasil");
+            result.innerText = "hasilnya faktorial nya adalah = " + hasil;
+    }
+        
+</script>
+
+<p id="hasil"></p>
+
+
+</body>
+</html
